@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amyloidpet-regional-centiloid-conversion"
+version = "0.1.0"
+description = "Regional and voxel-wise amyloid PET SUVR-to-Centiloid conversion"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "CC-BY-NC-ND-4.0" }
+classifiers = [
+    "License :: Free for non-commercial use",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "pandas>=1.4.0",
+    "nibabel>=4.0.0",
+    "openpyxl>=3.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pet_conversion*"]
